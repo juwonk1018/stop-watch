@@ -7,12 +7,12 @@ import StopWatch from "./components/StopWatch";
 function App() {
 
 
-  const [darkMode, setDarkMode] = useState(false);
-  const theme = darkMode ? 'dark' : 'light';
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  const theme = isDarkMode ? 'dark' : 'light';
 
   return (
     <div className={`main ${theme}`}>
-      <NavBar darkMode = {darkMode} setDarkMode = {setDarkMode}/>
+      <NavBar darkMode = {isDarkMode} setDarkMode = {setIsDarkMode}/>
       <StopWatch/>
     </div>
   );
