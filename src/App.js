@@ -1,12 +1,16 @@
 import "./App.css";
 
-import React, {useState} from "react";
-import NavBar from "./components/NavBar";
+import React, {useEffect, useState} from "react";
+import NavBar from "./components/NavBar.js";
 import StopWatch from "./components/StopWatch";
 
 function App() {
 
-  const [darkMode, setDarkMode] = useState(Boolean);
+
+  const [darkMode, setDarkMode] = useState(false);
+  
+
+  
 
   return (
     <div className="main">

@@ -1,4 +1,22 @@
 .navBar{
+    display : flex;
     width : 100%;
     text-align: center;
+    justify-content: center;
+    
+}
+
+.navIcon{
+    width : 2rem;
+    height : 2rem;
+    padding : 0;
+    margin : 0 0.5rem 0 0.5rem;
+    border-radius: 1rem;
+    border : 0.1px solid lightgrey;
+    background-color: white;
+}
+
+.navIcon:active{
+    background-color: black;
+    color : white;
 }
