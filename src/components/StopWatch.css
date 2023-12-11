@@ -7,13 +7,21 @@
     text-align: center;
 }
 
-.stopWatchDisplay{
-    color : white;
+.buttonGroup{
+    margin : 1rem 0 0 0;
 }
 
-
-
 .buttonGroup button{
+    margin : 0 0.2rem 0 0.2rem;
     background-color : white;
-    font-size : 2rem;
+    border-radius : 1rem;
+    border : none;
+    font-size : 1rem;
+}
+
+.buttonGroup button:active{
+    outline : none;
+    background-color: white;
+    
+    border : none;
 }

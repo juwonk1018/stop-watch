@@ -8,12 +8,10 @@ function App() {
 
 
   const [darkMode, setDarkMode] = useState(false);
-  
-
-  
+  const theme = darkMode ? 'dark' : 'light';
 
   return (
-    <div className="main">
+    <div className={`main ${theme}`}>
       <NavBar darkMode = {darkMode} setDarkMode = {setDarkMode}/>
       <StopWatch/>
     </div>
