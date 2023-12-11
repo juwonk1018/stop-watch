@@ -16,9 +16,10 @@
 .buttonGroup button{
     display : flex;
     width : 6rem;
+    border-radius: 0.3rem;
+    border : 1px solid black;
     margin : 0 0.2rem 0 0.2rem;
     background-color : white;
-    border : none;
     font-size : 1rem;
     align-items: center;
     justify-content: center;
