@@ -5,32 +5,37 @@ import './StopWatch.css';
 export default function StopWatch() {
 
     const [time, setTime] = useState(0);
-    const [progress, setProgress] = useState(false);
-    
-    const mounted = useRef(false);
-    useEffect(() => {
+    const [progress, setProgress] = useProgress();
 
-        if(!mounted.current){
-            mounted.current = true;
-        }
-        
-        else{
-            console.log("업데이트");
+    function useProgress() {
+
+        const [progress, setProgress] = useState(false);
+        const mounted = useRef(false);
+
+        useEffect(() => {
+
+            if(!mounted.current){
+                mounted.current = true;
+            }
             
-            if(progress){
-                const interval = setInterval(() => setTime((prev) => prev + 0.1), 100);
-                return () => {
-                    clearInterval(interval);
-                }
-                
-            }
             else{
-                console.log("Stop watch not work.")
+                console.log("업데이트");        
+                if(progress){
+                    const interval = setInterval(() => setTime((prev) => prev + 0.1), 100);
+                    return () => {
+                        clearInterval(interval);
+                    }
+                }
+                else{
+                    console.log("Stop watch not work.")
+                }
             }
-        }
-        
-        
-    }, [progress])
+            
+        }, [progress])
+
+        return [progress, setProgress];
+    }
+    
 
     return (
         <div className="stopWatchWrapper">
