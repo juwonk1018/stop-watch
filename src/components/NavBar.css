@@ -4,7 +4,12 @@
     width : 100%;
     text-align: center;
     justify-content: center;
-    
+    align-items: center;
+}
+
+.navMenu{
+    padding : 0.5rem 1rem 0.5rem 1rem;
+    border : 1px solid black;
 }
 
 .navIcon{
