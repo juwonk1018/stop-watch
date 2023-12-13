@@ -72,17 +72,18 @@
 
 
 .progressButtons button{
-    display : flex;
-    width : 6rem;
+    display: flex;
+    width: 6rem;
+    height: 2rem;
     background-color: white;
-    border-radius: 0.3rem;
+    border-radius: 1rem;
     border : 1px solid black;
     margin : 0 0.2rem 0 0.2rem;
     font-size : 1rem;
+    text-align: center;
     align-items: center;
     justify-content: center;
 }
-
 
 .progressButtons button:active{
     outline : none;
