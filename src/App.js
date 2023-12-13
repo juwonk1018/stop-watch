@@ -1,4 +1,5 @@
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from "@vercel/speed-insights/react"
 import "./App.css";
 
 import React, {useEffect, useState} from "react";
@@ -15,6 +16,7 @@ function App() {
     <div className={`main ${theme}`}>
       {/* <NavBar/> */}
       <StopWatch darkMode = {isDarkMode} setDarkMode = {setIsDarkMode}/>
+      <SpeedInsights/>
     </div>
   );
 }
