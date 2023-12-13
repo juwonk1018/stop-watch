@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import "./App.css";
 
 import React, {useEffect, useState} from "react";
