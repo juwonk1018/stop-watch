@@ -17,6 +17,7 @@ function App() {
       {/* <NavBar/> */}
       <StopWatch darkMode = {isDarkMode} setDarkMode = {setIsDarkMode}/>
       <SpeedInsights/>
+      <Analytics/>
     </div>
   );
 }
