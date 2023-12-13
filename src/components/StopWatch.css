@@ -14,6 +14,11 @@
     font-size : 6rem;
 }
 
+.displayPanel{
+    display : flex;
+    align-items: center;
+}
+
 .stopWatchDisplay{
     flex : 1;
     display : flex;
@@ -23,7 +28,13 @@
     text-align: center;
 }
 
-
+.stopWatchDisplay .smallButton{
+    height : 2rem;
+    width : 2rem;
+    border-radius : 1rem;
+    border : none;
+    background-color : white;
+}
 /* nav */
 
 .stopWatchNav{
@@ -43,7 +54,6 @@
     margin : 0 0.5rem 0 0.5rem;
     border-radius: 1rem;
     border : 0.1px solid lightgrey;
-    background-color: white;   
 }
 
 .navIcon:active{
@@ -52,21 +62,22 @@
 }
 
 
-/* stopwatch */
+/* stopwatch Progress Buttons */
 
 .progressButtons{
     display : flex;
     margin : 1rem 0 0 0;
+    align-items: center;
 }
 
 
 .progressButtons button{
     display : flex;
     width : 6rem;
+    background-color: white;
     border-radius: 0.3rem;
     border : 1px solid black;
     margin : 0 0.2rem 0 0.2rem;
-    background-color : white;
     font-size : 1rem;
     align-items: center;
     justify-content: center;
@@ -75,6 +86,5 @@
 
 .progressButtons button:active{
     outline : none;
-    background-color: white;
-    border : none;
+    border : 1px solid grey;
 }
