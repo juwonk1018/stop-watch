@@ -12,7 +12,7 @@ function App() {
 
   return (
     <div className={`main ${theme}`}>
-      <NavBar/>
+      {/* <NavBar/> */}
       <StopWatch darkMode = {isDarkMode} setDarkMode = {setIsDarkMode}/>
     </div>
   );
