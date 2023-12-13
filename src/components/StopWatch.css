@@ -1,19 +1,66 @@
 .stopWatchWrapper{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: inherit;
+    font-size : 4rem;
+    background-color: inherit;
+}
+
+.stopWatchWrapper:fullscreen{
+    font-size : 6rem;
+}
+
+.stopWatchDisplay{
+    flex : 1;
     display : flex;
     flex-direction: column;
-    height : 100%;
-    font-size : 4rem;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
 
-.buttonGroup{
+
+/* nav */
+
+.stopWatchNav{
+    display: flex;
+    margin : 1rem 0 0 0;
+    width: 100%;
+    justify-content: right;
+}
+
+.navIcon{
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    width : 2rem;
+    height : 2rem;
+    padding : 0;
+    margin : 0 0.5rem 0 0.5rem;
+    border-radius: 1rem;
+    border : 0.1px solid lightgrey;
+    background-color: white;   
+}
+
+.navIcon:active{
+    background-color: black;
+    color : white;
+}
+
+
+/* stopwatch */
+
+.progressButtons{
     display : flex;
     margin : 1rem 0 0 0;
 }
 
-.buttonGroup button{
+
+.progressButtons button{
     display : flex;
     width : 6rem;
     border-radius: 0.3rem;
@@ -25,18 +72,9 @@
     justify-content: center;
 }
 
-.buttonGroup button svg{
-    display : inline-block;
-    
-}
 
-.buttonGroup button span{
-    display : inline-block;
-}
-
-.buttonGroup button:active{
+.progressButtons button:active{
     outline : none;
     background-color: white;
-    
     border : none;
 }
