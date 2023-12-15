@@ -55,7 +55,7 @@ export default function StopWatch({darkMode, setDarkMode}) {
             
             else{
                 if(progress){
-                    const interval = setInterval(() => setTime((prev) => prev + 0.1), 100);
+                    const interval = setInterval(() => setTime((prev) => prev + 0.25), 250);
                     return () => {
                         clearInterval(interval);
                     }
