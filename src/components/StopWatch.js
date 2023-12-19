@@ -55,7 +55,6 @@ export default function StopWatch({darkMode, setDarkMode}) {
             
             else{    
                 if(progress){
-                    console.log(parseInt(time/3600));
                     let requestID;
 
                     startTime.current = Date.now() - time * 1000;
@@ -70,8 +69,6 @@ export default function StopWatch({darkMode, setDarkMode}) {
                     }
                 }
                 else{
-                    console.log(parseInt(time/3600));
-                    console.log(time);
                     console.log("Stop watch not work.");                    
                 }
             }
