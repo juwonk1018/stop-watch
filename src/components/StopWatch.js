@@ -3,6 +3,7 @@ import './StopWatch.css';
 
 export default function StopWatch({darkMode, setDarkMode}) {
 
+    const startTime = useRef(0);
     const [time, setTime] = useState(0);
     const [visibleButton, setVisibleButton] = useState(true);
     const [progress, setProgress] = useProgress();
@@ -43,7 +44,6 @@ export default function StopWatch({darkMode, setDarkMode}) {
     }
 
     function useProgress() {
-
         const [progress, setProgress] = useState(false);
         const mounted = useRef(false);
 
@@ -53,15 +53,26 @@ export default function StopWatch({darkMode, setDarkMode}) {
                 mounted.current = true;
             }
             
-            else{
+            else{    
                 if(progress){
-                    const interval = setInterval(() => setTime((prev) => prev + 0.25), 250);
-                    return () => {
-                        clearInterval(interval);
+                    console.log(parseInt(time/3600));
+                    let requestID;
+
+                    startTime.current = Date.now() - time * 1000;
+                    function calculateTimer(timeStamp){
+                        setTime((Date.now() - startTime.current) / 1000);
+                        requestID = requestAnimationFrame(calculateTimer);
+                    }
+                    requestAnimationFrame(calculateTimer);
+
+                    return() => {
+                        cancelAnimationFrame(requestID);
                     }
                 }
                 else{
-                    console.log("Stop watch not work.")
+                    console.log(parseInt(time/3600));
+                    console.log(time);
+                    console.log("Stop watch not work.");                    
                 }
             }
             
@@ -71,6 +82,7 @@ export default function StopWatch({darkMode, setDarkMode}) {
     }
     
     return (
+        
         <div className="stopWatchWrapper">
             <div className="stopWatchNav">
                 <button className={"navIcon"} onClick = {darkModeEvent}>
@@ -89,7 +101,7 @@ export default function StopWatch({darkMode, setDarkMode}) {
 
             <div className="stopWatchDisplay">
                 <div className="displayPanel">
-                    <span id="displayTime">{String(parseInt(time/3600)).padStart(2, "0")}:{String(parseInt(time/60)%60).padStart(2, "0")}:{String(parseInt(time%60)).padStart(2, "0")}</span>
+                    <span id="displayTime">{String(Math.floor(time/3600)).padStart(2, "0")}:{String(Math.floor(time/60)%60).padStart(2, "0")}:{String(Math.floor(time%60)).padStart(2, "0")}</span>
                 </div>
 
                 <div className={"progressButtons"}>
