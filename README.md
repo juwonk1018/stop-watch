@@ -18,7 +18,7 @@ Launches the test runner in the interactive watch mode.\
 
 ### Stopwatch
 
-[https://st0pwatch.vercel.app/]
+[https://st0pwatch.vercel.app]/(https://st0pwatch.vercel.app/)
 
 1. Dark Mode
 2. Button Visibility
