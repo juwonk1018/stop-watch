@@ -14,10 +14,6 @@
     font-size : 6rem;
 }
 
-.displayPanel{
-    display : flex;
-    align-items: center;
-}
 
 .stopWatchDisplay{
     flex : 1;
@@ -28,13 +24,18 @@
     text-align: center;
 }
 
-.stopWatchDisplay .smallButton{
-    height : 2rem;
-    width : 2rem;
-    border-radius : 1rem;
-    border : none;
-    background-color : white;
+.displayPanel{
+    display : flex;
+    align-items: center;
+    justify-content: center;
 }
+
+#displayTime{
+    font-family: 'batang';    vertical-align: middle;
+    display : flex;
+    height : 100%;
+}
+
 
 /* nav */
 
@@ -65,13 +66,19 @@
 
 /* stopwatch Progress Buttons */
 
+
+.buttonContainer{
+    display : flex;
+}
+
 .progressButtons{
     display : flex;
     margin : 1rem 0 0 0;
     align-items: center;
 }
 
-.progressButtons .emptyDiv{
+.emptyDiv{
+    margin : 1rem 0 0 0;
     height : 2rem;
 }
 
