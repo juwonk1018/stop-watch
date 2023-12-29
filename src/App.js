@@ -12,11 +12,13 @@ function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const theme = isDarkMode ? 'dark' : 'light';
   const [recordList, setRecordList] = useState([]);
+  const [visibleButton, setVisibleButton] = useState(true);
 
   return (
     <div className={`main ${theme}`}>
-      {/* <NavBar/> */}
-      <StopWatch darkMode = {isDarkMode} setDarkMode = {setIsDarkMode} recordList = {recordList} setRecordList = {setRecordList}/>
+      <NavBar darkMode = {isDarkMode} setDarkMode = {setIsDarkMode} visibleButton = {visibleButton} setVisibleButton = {setVisibleButton}/>
+      <StopWatch darkMode = {isDarkMode} setDarkMode = {setIsDarkMode} recordList = {recordList} setRecordList = {setRecordList}
+        visibleButton = {visibleButton} setVisibleButton = {setVisibleButton}/>
       <SpeedInsights/>
       <Analytics/>
     </div>

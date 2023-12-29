@@ -6,14 +6,8 @@
     text-align: center;
     justify-content: center;
     color: inherit;
-    font-size : 4rem;
     background-color: inherit;
 }
-
-.stopWatchWrapper:fullscreen{
-    font-size : 6rem;
-}
-
 
 .stopWatchDisplay{
     flex : 1;
@@ -31,38 +25,11 @@
 }
 
 #displayTime{
-    font-family: 'batang';    vertical-align: middle;
+    font-family: 'batang';
+    vertical-align: middle;
     display : flex;
     height : 100%;
 }
-
-
-/* nav */
-
-.stopWatchNav{
-    display: flex;
-    margin : 1rem 0 0 0;
-    width: 100%;
-    justify-content: right;
-}
-
-.navIcon{
-    display : flex;
-    justify-content: center;
-    align-items: center;
-    width : 2rem;
-    height : 2rem;
-    padding : 0;
-    margin : 0 0.5rem 0 0.5rem;
-    border-radius: 1rem;
-    border : 0.1px solid lightgrey;
-}
-
-.navIcon:active{
-    background-color: black;
-    color : white;
-}
-
 
 /* stopwatch Progress Buttons */
 
