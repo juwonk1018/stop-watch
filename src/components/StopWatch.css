@@ -101,3 +101,39 @@
     outline : none;
     border : 1px solid grey;
 }
+
+.recordList{
+    transition : 0.3s linear;
+    font-size : 1rem;
+    margin : 1rem 0 0 0;
+    width : 15rem;
+    height : 10rem;
+    text-align: center;    
+}
+
+.recordList-hide{
+    opacity: 0;
+    display: none;
+}
+
+.recordList table{
+    height: 10rem;
+    padding : 1rem 1rem 1rem 1rem;
+    border-collapse: collapse;
+    justify-content: space-around;
+    text-align: left;
+    overflow : auto;
+}
+
+.recordList > table > th{
+    font-weight: lighter;
+    border-bottom: 1px solid lightgrey;
+    width : 100px;
+}
+
+.recordList > table > tr{
+    font-weight: lighter;
+    height: 3rem;
+    border-bottom: 1px solid lightgrey;
+    
+}

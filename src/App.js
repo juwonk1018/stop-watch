@@ -11,11 +11,12 @@ function App() {
 
   const [isDarkMode, setIsDarkMode] = useState(false);
   const theme = isDarkMode ? 'dark' : 'light';
+  const [recordList, setRecordList] = useState([]);
 
   return (
     <div className={`main ${theme}`}>
       {/* <NavBar/> */}
-      <StopWatch darkMode = {isDarkMode} setDarkMode = {setIsDarkMode}/>
+      <StopWatch darkMode = {isDarkMode} setDarkMode = {setIsDarkMode} recordList = {recordList} setRecordList = {setRecordList}/>
       <SpeedInsights/>
       <Analytics/>
     </div>
