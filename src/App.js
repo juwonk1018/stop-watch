@@ -8,7 +8,6 @@ import StopWatch from "./components/StopWatch";
 
 function App() {
 
-
   const [isDarkMode, setIsDarkMode] = useState(false);
   const theme = isDarkMode ? 'dark' : 'light';
   const [recordList, setRecordList] = useState([]);
