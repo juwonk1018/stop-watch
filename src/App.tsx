@@ -3,15 +3,15 @@ import { SpeedInsights } from "@vercel/speed-insights/react"
 import "./App.css";
 
 import React, {useEffect, useState} from "react";
-import NavBar from "./components/NavBar.js";
+import NavBar from "./components/NavBar";
 import StopWatch from "./components/StopWatch";
 
 function App() {
 
-  const [isDarkMode, setIsDarkMode] = useState(false);
-  const theme = isDarkMode ? 'dark' : 'light';
-  const [recordList, setRecordList] = useState([]);
-  const [visibleButton, setVisibleButton] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
+  const theme : string = isDarkMode ? 'dark' : 'light';
+  const [recordList, setRecordList] = useState<string[][]>([]);
+  const [visibleButton, setVisibleButton] = useState<boolean>(true);
 
   return (
     <div className={`main ${theme}`}>
