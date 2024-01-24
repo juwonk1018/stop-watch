@@ -1,9 +1,9 @@
 import React, {useState, useEffect, useRef} from 'react';
+import { useSelector } from 'react-redux';
+import { RootState } from '../reducers/store';
 import './StopWatch.css';
 
 type stopWatchProps = {
-    darkMode : boolean;
-    visibleButton : boolean;
     recordList : string[][];
     setRecordList : React.Dispatch<React.SetStateAction<string[][]>>;
 };
@@ -12,12 +12,14 @@ function timeHMS(time : number) {
     return String(Math.floor(time/3600)).padStart(2, "0")+":"+String(Math.floor(time/60)%60).padStart(2, "0")+":"+String(Math.floor(time%60)).padStart(2, "0");
 }
 
-const StopWatch = ({darkMode, visibleButton, recordList, setRecordList} : stopWatchProps) => {
+const StopWatch = ({recordList, setRecordList} : stopWatchProps) => {
 
     const startTime = useRef(0);
     const prevStopWatch = useRef(0);
     const recordID = useRef(1);
     const [time, setTime] = useState<number>(0);
+    const darkMode = useSelector((state : RootState) => state.darkMode.value);
+    const visibleButton = useSelector((state : RootState) => state.visibleButton.value);
     const [progress, setProgress] = useProgress();
     
     function useProgress(): [boolean, React.Dispatch<React.SetStateAction<boolean>>];
@@ -94,11 +96,11 @@ const StopWatch = ({darkMode, visibleButton, recordList, setRecordList} : stopWa
                 {
                     <div className = {"recordList " + (visibleButton ? '' : 'recordList-hide')}>
                     <table>
-                        <thead>
-                            <th className = {(darkMode ? 'dark' : 'light')}>No.</th>
-                            <th className = {(darkMode ? 'dark' : 'light')}>LAB TIME</th>
-                            <th className = {(darkMode ? 'dark' : 'light')}>TOTAL</th>
-                            <th className = {(darkMode ? 'dark' : 'light')}></th>
+                        <thead className = {(darkMode ? 'dark' : 'light')}>
+                            <th>No.</th>
+                            <th>LAB TIME</th>
+                            <th>TOTAL</th>
+                            <th></th>
                         </thead>
                         
                         <tbody>

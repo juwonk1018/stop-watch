@@ -5,18 +5,19 @@ import "./App.css";
 import React, {useState} from "react";
 import NavBar from "./components/NavBar";
 import StopWatch from "./components/StopWatch";
+import { useSelector } from 'react-redux';
+import { RootState } from './reducers/store';
 
 function App() {
 
-  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
-  const theme : string = isDarkMode ? 'dark' : 'light';
+  const theme : string = useSelector((state : RootState) => state.darkMode.value) ? "dark" : "light"  ;
   const [recordList, setRecordList] = useState<string[][]>([]);
   const [visibleButton, setVisibleButton] = useState<boolean>(true);
 
   return (
     <div className={`main ${theme}`}>
-      <NavBar darkMode = {isDarkMode} setDarkMode = {setIsDarkMode} visibleButton = {visibleButton} setVisibleButton = {setVisibleButton}/>
-      <StopWatch darkMode = {isDarkMode} recordList = {recordList} setRecordList = {setRecordList} visibleButton = {visibleButton}/>
+      <NavBar/>
+      <StopWatch recordList = {recordList} setRecordList = {setRecordList}/>
       <SpeedInsights/>
       <Analytics/>
     </div>
