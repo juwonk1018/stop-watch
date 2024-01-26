@@ -1,9 +1,9 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './NavBar.css';
-import { RootState } from '../reducers/store';
-import { toggleDarkMode } from '../reducers/darkModeReducer';
-import { toggleVisibleButton } from '../reducers/visibleButtonReducer';
+import { RootState } from '../../app/store';
+import { toggleDarkMode } from './darkModeSlice';
+import { toggleVisibleButton } from './visibleButtonSlice';
 
 const document: any = window.document;
 
