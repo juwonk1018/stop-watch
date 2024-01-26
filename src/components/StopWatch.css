@@ -115,19 +115,18 @@
 
 .recordList table{
     table-layout: fixed;
-    width : 20rem;
+    width : 100%;
     justify-content: space-around;
-    text-align: left;
     border-collapse : collapse;
     
 }
 
 .recordList > table > thead > th{
-    position : sticky;
+    background-color : inherit;
+    border-bottom: 1px solid lightgrey;
     top : 0px;
     font-weight: lighter;
     text-align: center;
-    border-bottom: 1px solid lightgrey;
     height : 2rem;
     width : 1.5rem;
 }
