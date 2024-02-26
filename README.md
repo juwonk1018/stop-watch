@@ -7,12 +7,17 @@
 
 ### Stopwatch
 
+This project is online stopwatch website.
+
 [https://st0pwatch.vercel.app](https://st0pwatch.vercel.app/)
 
 <h4>1. Dark Mode</h4>
-<h4>2. Button Visibility</h4>
-<h4>3. Full Screen Mode</h4>
+- You can choose the dark/light mode of the website.
 
+<h4>2. Button Visibility</h4>
+- You can hide the buttons related to recording.
+<h4>3. Full Screen Mode</h4>
+- You can fully concentrate on the stopwatch through the full screen.
 <br/>
 
 ### Script
@@ -23,8 +28,3 @@ In the project directory, you can run:
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
